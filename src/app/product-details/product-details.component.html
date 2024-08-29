@@ -1,13 +1,13 @@
 <h2>Product Details</h2>
 
 <div *ngIf="product">
-  <h3>{{ product.year }} {{ product.card_brand | uppercase }} {{ product.set | uppercase }} {{ product.card_name | uppercase }}</h3>
-  <h4>{{ product.profit_potential | currency }}</h4>
+  <h3>{{ product.product_type | uppercase  }} {{ product.product_type_category | uppercase  }} {{ product.product_brand | uppercase  }}
+    {{ product.product_color | uppercase  }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <img [src]="product.product_image" height="384px" width="512px" />
   <p>
-    Description: {{ product.year }} {{ product.card_brand | uppercase }} {{ product.set | uppercase }} {{ product.card_name | uppercase }} {{ product.set_number }} / {{ product.set_end_number }} {{ product.rarity | uppercase }}</p>
-    <p>{{ product.special }} {{ product.graded }} {{ product.graded_quality }} {{ product.graded_unique_number }} 
-  </p>
-  <p>Investment: {{ product.investment | currency }}</p>
-  <p>Potential Price: {{ product.profit_potential | currency }}</p>
+    Description: {{ product.product_type | uppercase  }} {{ product.product_type_category | uppercase  }} {{ product.product_brand | uppercase  }}
+    {{ product.product_color | uppercase  }}</p>
+  <p>Price: {{ product.price | currency }}</p>
   <button (click)="addToCart(product)">Buy</button>
 </div>

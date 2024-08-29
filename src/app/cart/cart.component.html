@@ -5,8 +5,8 @@
 </p>
 
 <div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.year }} {{ item.card_brand }} {{ item.set}} {{ item.card_name}}</span>
-  <span>{{ item.profit_potential | currency }}</span>
+  <span>{{ item.product_type }} {{ item.product_type_category }} {{ item.product_brand }} {{ item.product_color }}</span>
+  <span>{{ item.price | currency }}</span>
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">

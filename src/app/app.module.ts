@@ -22,6 +22,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'productBuilder', component: ProductBuilderComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
     ])
